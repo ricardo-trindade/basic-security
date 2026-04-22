@@ -1,11 +1,12 @@
 package com.back.security.DTO;
 
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
+import lombok.Data;
 
-public record UsuarioRequestDTO(
-        @NotBlank String nome,
-        @NotBlank @Email String email,
-        @NotBlank String senha
-) {
+@Data
+public class UsuarioRequestDTO {
+
+    private String nome;
+    private String email;
+    private String senha;
+
 }
